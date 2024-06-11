@@ -1,3 +1,70 @@
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background: #412f70d0;
+}
 h1 {
+  margin-top: 0;
   text-align: center;
+  font-size: 45px;
+}
+
+h2 {
+  margin: 0 0 5px;
+  font-size: 30px;
+}
+
+select {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 6px;
+  background-color: #f9f7fe;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+small {
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+a {
+  color: rgb(218, 181, 218);
+}
+
+.container {
+  background-color: white;
+  max-width: 600px;
+  margin: 60px auto;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 5px 7px 5px 5px rgba(255, 255, 255, 0.2);
+}
+
+.cities {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.cities:last-child {
+  border-bottom: none;
+}
+
+.date {
+  opacity: 0.8;
+  font-size: 20px;
+}
+
+.time {
+  font-size: 48px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+footer {
+  text-align: center;
+  color: lightgrey;
 }

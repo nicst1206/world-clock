@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>World Clock - Nicole Stoewer-Rust</title>
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <h1>World Clock</h1>
 
       <select>
@@ -17,14 +23,25 @@
         <option>Auckland</option>
       </select>
       <div class="cities">
-        <h2>Los Angeles</h2>
-        <div class="date">June 11th 2024</div>
-        <div class="time">05:01:15 PM</div>
+        <div>
+          <h2>Los Angeles</h2>
+          <div class="date">June 11th 2024</div>
+        </div>
+        <div class="time">05:01:15 <small>PM</small></div>
       </div>
       <div class="cities">
-        <h2>Sydney</h2>
-        <div class="date">June 11th 2024</div>
-        <div class="time">05:01:15 PM</div>
+        <div>
+          <h2>Berlin</h2>
+          <div class="date">June 11th 2024</div>
+        </div>
+        <div class="time">05:01:15 <small>PM</small></div>
+      </div>
+      <div class="cities">
+        <div>
+          <h2>Sydney</h2>
+          <div class="date">June 11th 2024</div>
+        </div>
+        <div class="time">05:01:15 <small>PM</small></div>
       </div>
     </div>
     <footer>
