@@ -1,15 +1,15 @@
-let firstCity = "Los Angeles";
+let firstCity = "Minneapolis";
 
 function updateTime(firstCity) {
   let firstCityElement = document.querySelector("#first-city");
 
-  if (firstCity === "Los Angeles") {
-    let losAngelesDateElement = firstCityElement.querySelector(".date");
-    let losAngelesTimeElement = firstCityElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
+  if (firstCity === "Minneapolis") {
+    let minneapolisDateElement = firstCityElement.querySelector(".date");
+    let minneapolisTimeElement = firstCityElement.querySelector(".time");
+    let minneapolisTime = moment().tz("America/Chicago");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-    losAngelesTimeElement.innerHTML = `${losAngelesTime.format(
+    minneapolisDateElement.innerHTML = minneapolisTime.format("MMMM Do YYYY");
+    minneapolisTimeElement.innerHTML = `${minneapolisTime.format(
       "h:mm:ss [<small>]A[</small>]"
     )}`;
   } else {
