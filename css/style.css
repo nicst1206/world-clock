@@ -64,6 +64,15 @@ a {
   font-weight: bold;
   vertical-align: middle;
 }
+
+.return-link {
+  margin-top: 15px;
+}
+
+.return-link a {
+  color: #412f70d0;
+}
+
 footer {
   text-align: center;
   color: lightgrey;

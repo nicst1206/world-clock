@@ -65,6 +65,8 @@ function updateCity(event) {
         <div class="time">${cityTimeElement}</div>`;
   cityElement.innerHTML = cityElementString;
   firstCity = cityTimeZone;
+  let link = document.querySelector("#return-link");
+  link.innerHTML = `<a href="/">Back to all cities</a>`;
 }
 
 updateTime(firstCity);
