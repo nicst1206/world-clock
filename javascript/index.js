@@ -14,8 +14,18 @@ function updateTime(firstCity) {
     )}`;
   } else {
     let cityTimeZone = firstCity;
-    let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    let edinburgh = false;
+    let cityName = "";
+    if (firstCity === "Edinburgh") {
+      cityTimeZone = "Europe/London";
+      cityName = "Edinburgh";
+      edinburgh = true;
+    } else {
+      cityName = cityTimeZone.replace("_", " ").split("/")[1];
+    }
+
     let cityTime = moment().tz(cityTimeZone);
+
     let cityElement = document.querySelector("#first-city");
     let cityDateElement = cityTime.format("MMMM Do YYYY");
     let cityTimeElement = cityTime.format("h:mm:ss [<small>]A[</small>]");
@@ -50,11 +60,25 @@ function updateTime(firstCity) {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  let edinburgh = false;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
-  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityName = "";
+
+  if (cityTimeZone === "Edinburgh") {
+    cityTimeZone = "Europe/London";
+    edinburgh = true;
+  }
+
+  if (edinburgh === true) {
+    cityName = "Edinburgh";
+  } else {
+    cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  }
+
   let cityTime = moment().tz(cityTimeZone);
+
   let cityElement = document.querySelector("#first-city");
   let cityDateElement = cityTime.format("MMMM Do YYYY");
   let cityTimeElement = cityTime.format("h:mm:ss [<small>]A[</small>]");
@@ -64,7 +88,12 @@ function updateCity(event) {
         </div>
         <div class="time">${cityTimeElement}</div>`;
   cityElement.innerHTML = cityElementString;
-  firstCity = cityTimeZone;
+  if (edinburgh === true) {
+    firstCity = "Edinburgh";
+  } else {
+    firstCity = cityTimeZone;
+  }
+
   let link = document.querySelector("#return-link");
   link.innerHTML = `<a href="/">Back to all cities</a>`;
 }
